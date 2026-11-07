@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Limeque Unlimited | Creative Media, Tech & Gaming Services</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#e61b36',
+              cyan: '#00e5ff',
+              neonBlue: '#3b82f6',
+              dark: '#080a0f',
+              card: 'rgba(16, 21, 33, 0.75)',
+              border: 'rgba(255, 255, 255, 0.08)'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          boxShadow: {
+            neonCyan: '0 0 25px -4px rgba(0, 229, 255, 0.45)',
+            neonRed: '0 0 25px -4px rgba(230, 27, 54, 0.45)',
+            cardHover: '0 12px 35px -8px rgba(0, 229, 255, 0.25)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #07090e;
+      color: #f1f5f9;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(0, 229, 255, 0.07) 0%, transparent 35%),
+        radial-gradient(circle at 85% 65%, rgba(230, 27, 54, 0.06) 0%, transparent 40%),
+        linear-gradient(to bottom, #07090e, #0b0f19);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(14, 18, 28, 0.7);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .neon-text-cyan {
+      text-shadow: 0 0 14px rgba(0, 229, 255, 0.6);
+    }
+
+    .neon-text-red {
+      text-shadow: 0 0 14px rgba(230, 27, 54, 0.6);
+    }
+
+    /* Custom scrollbars */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #090c14;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e2638;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #00e5ff;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col font-sans antialiased text-slate-200 selection:bg-brand-red selection:text-white pb-12">
+
+  <!-- Top Announcement Notification -->
+  <div class="bg-gradient-to-r from-brand-red/20 via-black to-brand-cyan/20 border-b border-white/10 px-4 py-2.5 text-xs text-center font-medium tracking-wide flex items-center justify-center gap-2">
+    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/30 uppercase tracking-wider animate-pulse">Hampton Roads & Remote</span>
+    <span class="text-slate-300">Fast Bookings & Direct Inquiries Available 7 Days a Week</span>
+    <a href="tel:5465463783" class="hidden sm:inline-flex items-center text-white hover:text-brand-cyan font-mono font-semibold ml-2 underline underline-offset-4 decoration-brand-cyan">
+      (546) LIMEQUE
+    </a>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <header class="sticky top-0 z-40 glass-panel border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo Branding -->
+      <a href="#" class="flex items-center gap-3.5 group">
+        <!-- SVG recreation of LU mark -->
+        <div class="relative w-11 h-11 flex-shrink-0 bg-slate-950 rounded-xl p-1.5 border border-white/15 group-hover:border-brand-cyan/60 transition-all duration-300 shadow-lg group-hover:shadow-neonCyan">
+          <svg viewBox="0 0 100 100" class="w-full h-full drop-shadow">
+            <!-- Left Tall Column -->
+            <path d="M22 15 L40 15 L40 68 L22 75 Z" fill="#ffffff" class="group-hover:fill-cyan-300 transition-colors" />
+            <!-- Red Diagonal Accent -->
+            <path d="M38 38 L82 12 L82 28 L38 52 Z" fill="#e61b36" />
+            <!-- Right U Loop & Lower Base -->
+            <path d="M68 28 L82 28 L82 66 C82 78 72 88 56 88 C40 88 28 80 22 74 L32 64 C37 68 46 74 56 74 C62 74 68 70 68 64 Z" fill="#ffffff" class="group-hover:fill-cyan-300 transition-colors" />
+          </svg>
+        </div>
+        <div>
+          <div class="flex items-center gap-1.5">
+            <span class="font-extrabold tracking-tight text-xl text-white">LIMEQUE</span>
+            <span class="font-extrabold tracking-tight text-xl text-brand-red">UNLIMITED</span>
+          </div>
+          <p class="text-[11px] font-mono uppercase tracking-widest text-slate-400">Media • Tech • Gaming • Launch</p>
+        </div>
+      </a>
+
+      <!-- Quick Action Buttons -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="#services" class="text-sm font-medium text-slate-300 hover:text-white transition">Services</a>
+        <a href="#quote-builder" class="text-sm font-medium text-slate-300 hover:text-brand-cyan transition">Estimate Quote</a>
+        <a href="https://instagram.com/limequeunlimited" target="_blank" class="text-sm font-medium text-slate-300 hover:text-brand-red transition flex items-center gap-1.5">
+          <i class="fa-brands fa-instagram text-brand-red"></i> @limequeunlimited
+        </a>
+        <button onclick="openContactModal()" class="px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-white/10 hover:bg-white/15 border border-white/20 text-white transition flex items-center gap-2">
+          <i class="fa-solid fa-address-card text-brand-cyan"></i> Save Contact
+        </button>
+        <a href="tel:5465463783" class="px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-brand-red to-rose-600 hover:from-rose-600 hover:to-brand-red text-white transition shadow-lg shadow-brand-red/30">
+          <i class="fa-solid fa-phone mr-1.5"></i> (546) 546-3783
+        </a>
+      </div>
+
+      <!-- Mobile Contact Button -->
+      <div class="flex items-center gap-2 md:hidden">
+        <button onclick="openContactModal()" class="p-2.5 rounded-xl bg-white/10 text-brand-cyan border border-white/10">
+          <i class="fa-solid fa-qrcode text-lg"></i>
+        </button>
+        <a href="tel:5465463783" class="px-3.5 py-2 rounded-xl text-xs font-bold bg-brand-red text-white flex items-center gap-1.5">
+          <i class="fa-solid fa-phone"></i> Call/Text
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-12 pb-16 md:pt-20 md:pb-24 overflow-hidden">
+    <!-- Ambient glow orbs -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-brand-cyan/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute bottom-10 right-10 w-[350px] h-[350px] bg-brand-red/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      
+      <!-- Top Pill -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-brand-cyan/40 bg-brand-cyan/10 text-cyan-300 text-xs font-mono font-medium mb-6 backdrop-blur">
+        <span class="w-2 h-2 rounded-full bg-brand-cyan animate-ping"></span>
+        CREATIVE HUB & ALL-IN-ONE DIGITAL SOLUTIONS
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+        Next-Level Production. <br/>
+        <span class="bg-gradient-to-r from-brand-cyan via-white to-brand-red bg-clip-text text-transparent">
+          Bulletproof Tech & Gaming.
+        </span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-slate-300 mb-9 font-normal leading-relaxed">
+        From professional live broadcast setups, photography, and high-impact social clips to full OS restorations, custom device setups, competitive Pokémon vault services, and startup business launch consulting.
+      </p>
+
+      <!-- Primary Action Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4 mb-12">
+        <a href="#services" class="px-7 py-3.5 rounded-2xl bg-gradient-to-r from-brand-red to-rose-700 text-white font-bold text-sm tracking-wider uppercase shadow-neonRed hover:brightness-110 transition flex items-center gap-2">
+          <span>Explore Services</span>
+          <i class="fa-solid fa-arrow-down text-xs"></i>
+        </a>
+        <a href="#quote-builder" class="px-7 py-3.5 rounded-2xl glass-panel text-white font-bold text-sm tracking-wider uppercase border border-brand-cyan/40 hover:border-brand-cyan text-brand-cyan transition shadow-neonCyan flex items-center gap-2">
+          <i class="fa-solid fa-calculator"></i>
+          <span>Build Custom Quote</span>
+        </a>
+        <button onclick="copyToClipboard('LimequeUltd@icloud.com', 'Email copied!')" class="px-5 py-3.5 rounded-2xl glass-panel text-slate-300 hover:text-white font-medium text-sm border border-white/10 hover:border-white/30 transition flex items-center gap-2">
+          <i class="fa-solid fa-envelope"></i>
+          <span>LimequeUltd@icloud.com</span>
+        </button>
+      </div>
+
+      <!-- Quick Trust Indicators / Direct Info Strip -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto text-left">
+        <div class="p-3.5 rounded-xl glass-panel border border-white/5 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-brand-cyan/15 flex items-center justify-center text-brand-cyan font-bold text-lg">
+            <i class="fa-solid fa-camera"></i>
+          </div>
+          <div>
+            <div class="text-xs text-slate-400">Content & Studio</div>
+            <div class="text-sm font-bold text-white">Live & Photo/Video</div>
+          </div>
+        </div>
+
+        <div class="p-3.5 rounded-xl glass-panel border border-white/5 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-brand-red/15 flex items-center justify-center text-brand-red font-bold text-lg">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <div>
+            <div class="text-xs text-slate-400">Hardware & OS</div>
+            <div class="text-sm font-bold text-white">Restores & Devices</div>
+          </div>
+        </div>
+
+        <div class="p-3.5 rounded-xl glass-panel border border-white/5 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-purple-500/15 flex items-center justify-center text-purple-400 font-bold text-lg">
+            <i class="fa-solid fa-gamepad"></i>
+          </div>
+          <div>
+            <div class="text-xs text-slate-400">Gaming & Vault</div>
+            <div class="text-sm font-bold text-white">Pokémon & Consoles</div>
+          </div>
+        </div>
+
+        <div class="p-3.5 rounded-xl glass-panel border border-white/5 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-emerald-500/15 flex items-center justify-center text-emerald-400 font-bold text-lg">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <div>
+            <div class="text-xs text-slate-400">Business Launch</div>
+            <div class="text-sm font-bold text-white">Consulting & Credit</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Free Domain & Student Resources Guide Banner -->
+  <section class="max-w-6xl mx-auto px-4 mb-14">
+    <div class="glass-panel border-l-4 border-brand-cyan p-5 sm:p-6 rounded-2xl relative overflow-hidden">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <i class="fa-brands fa-github text-white text-lg"></i>
+            <span class="text-brand-cyan font-mono text-xs uppercase tracking-wider font-bold">Fast Setup Tip</span>
+            <span class="text-xs bg-brand-red/20 text-brand-red px-2 py-0.5 rounded-full font-bold">100% Free Hosting</span>
+          </div>
+          <h3 class="text-lg font-bold text-white">Hosting this exact page right now for free:</h3>
+          <p class="text-xs sm:text-sm text-slate-300 mt-1 max-w-2xl">
+            Push this <code class="text-brand-cyan bg-black/50 px-1.5 py-0.5 rounded font-mono">index.html</code> to a GitHub repository named <code class="text-brand-cyan bg-black/50 px-1.5 py-0.5 rounded font-mono">limequeunlimited.github.io</code> or enable <strong>GitHub Pages</strong>. Use your free <strong>GitHub Student Developer Pack</strong> to claim a free <code class="text-brand-cyan">.me</code>, <code class="text-brand-cyan">.tech</code> or Namecheap domain free for a whole year!
+          </p>
+        </div>
+        <button onclick="openHostingGuideModal()" class="flex-shrink-0 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs uppercase tracking-wider transition border border-white/15">
+          <i class="fa-solid fa-book-open mr-1.5 text-brand-cyan"></i> View Step-by-Step
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Filter Section -->
+  <section id="services" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-20">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+      <div>
+        <span class="text-brand-red font-mono text-xs uppercase tracking-widest font-bold">Comprehensive Capabilities</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">What Limeque Unlimited Does</h2>
+        <p class="text-slate-400 text-sm mt-1">Pick a pillar below to filter our specialized catalog.</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap gap-2 p-1.5 glass-panel rounded-2xl border border-white/10">
+        <button onclick="filterCategory('all')" id="btn-all" class="category-btn px-4 py-2 rounded-xl text-xs font-bold transition bg-brand-cyan text-black">
+          All Services
+        </button>
+        <button onclick="filterCategory('media')" id="btn-media" class="category-btn px-4 py-2 rounded-xl text-xs font-bold transition text-slate-300 hover:text-white">
+          <i class="fa-solid fa-video mr-1"></i> Media & Content
+        </button>
+        <button onclick="filterCategory('tech')" id="btn-tech" class="category-btn px-4 py-2 rounded-xl text-xs font-bold transition text-slate-300 hover:text-white">
+          <i class="fa-solid fa-microchip mr-1"></i> Tech & Systems
+        </button>
+        <button onclick="filterCategory('gaming')" id="btn-gaming" class="category-btn px-4 py-2 rounded-xl text-xs font-bold transition text-slate-300 hover:text-white">
+          <i class="fa-solid fa-gamepad mr-1"></i> Gaming Vault
+        </button>
+        <button onclick="filterCategory('business')" id="btn-business" class="category-btn px-4 py-2 rounded-xl text-xs font-bold transition text-slate-300 hover:text-white">
+          <i class="fa-solid fa-briefcase mr-1"></i> Business & Credit
+        </button>
+      </div>
+    </div>
+
+    <!-- Cards Grid -->
+    <div id="service-cards-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- 1. Live Streaming & Broadcast -->
+      <div class="service-card group glass-panel rounded-2xl p-6 border border-white/10 hover:border-brand-cyan/60 transition-all duration-300 flex flex-col justify-between" data-category="media">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold bg-brand-cyan/15 text-brand-cyan border border-brand-cyan/30 uppercase">Broadcast</span>
+            <i class="fa-solid fa-tower-broadcast text-brand-cyan text-xl group-hover:scale-110 transition-transform"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brand-cyan transition-colors">Live Streaming & Broadcast Management</h3>
+          <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            Full-scale setup and live engineering for streamers, podcasters, gaming creators, and corporate events on Twitch, YouTube, and Kick. Multi-camera switching, audio mastering, OBS overlays, and zero-drop bitrates.
+          </p>
+          <ul class="text-xs text-slate-400 space-y-1.5 font-mono mb-6">
+            <li><i class="fa-solid fa-check text-brand-cyan mr-1.5"></i> Custom OBS & Streamlabs Scene Configurations</li>
+            <li><i class="fa-solid fa-check text-brand-cyan mr-1.5"></i> Dual-PC / Console Audio Routing</li>
+            <li><i class="fa-solid fa-check text-brand-cyan mr-1.5"></i> On-Site & Remote Technical Monitoring</li>
+          </ul>
+        </div>
+        <button onclick="addToQuote('Live Streaming & Broadcast Setup')" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold bg-white/5 hover:bg-brand-cyan hover:text-black border border-white/15 text-white transition flex items-center justify-center gap-2">
+          <i class="fa-solid fa-plus"></i> Add to Quote
+        </button>
+      </div>
+
+      <!-- 2. Photography -->
+      <div class="service-card group glass-panel rounded-2xl p-6 border border-white/10 hover:border-brand-red/60 transition-all duration-300 flex flex-col justify-between" data-category="media">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold bg-brand-red/15 text-brand-red border border-brand-red/30 uppercase">Visuals</span>
+            <i class="fa-solid fa-camera-retro text-brand-red text-xl group-hover:scale-110 transition-transform"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brand-red transition-colors">Professional Photography</h3>
+          <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            Distinctive, crisp imagery engineered for impact. Brand portraits, model looks, content creator portfolios, commercial product shots, events, and automotive/real estate framing across Hampton Roads.
+          </p>
+          <ul class="text-xs text-slate-400 space-y-1.5 font-mono mb-6">
+            <li><i class="fa-solid fa-check text-brand-red mr-1.5"></i> High-Resolution Retouching & Color Grading</li>
+            <li><i class="fa-solid fa-check text-brand-red mr-1.5"></i> On-Location Lighting & Studio Shoots</li>
+            <li><i class="fa-solid fa-check text-brand-red mr-1.5"></i> Fast Turnaround Cloud Gallery Delivery</li>
+          </ul>
+        </div>
+        <button onclick="addToQuote('Professional Photography Session')" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold bg-white/5 hover:bg-brand-red hover:text-white border border-white/15 text-white transition flex items-center justify-center gap-2">
+          <i class="fa-solid fa-plus"></i> Add to Quote
+        </button>
+      </div>
+
+      <!-- 3. Videography & Short-Form Editing -->
+      <div class="service-card group glass-panel rounded-2xl p-6 border border-white/10 hover:border-brand-cyan/60 transition-all duration-300 flex flex-col justify-between" data-category="media">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold bg-brand-cyan/15 text-brand-cyan border border-brand-cyan/30 uppercase">Post-Production</span>
+            <i class="fa-solid fa-film text-brand-cyan text-xl group-hover:scale-110 transition-transform"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brand-cyan transition-colors">Videography & Short-Form Editing</h3>
+          <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            End-to-end cinematic filming and high-retention clipping. Transform long-form podcasts, gaming sessions, and promo footage into viral TikTok, Instagram Reels, and YouTube Shorts.
+          </p>
+          <ul class="text-xs text-slate-400 space-y-1.5 font-mono mb-6">
+            <li><i class="fa-solid fa-check text-brand-cyan mr-1.5"></i> 4K Capture, Stabilized Gimbals & Mic Kits</li>
+            <li><i class="fa-solid fa-check text-brand-cyan mr-1.5"></i> Dynamic Captions, SFX & Motion Graphics</li>
+            <li><i class="fa-solid fa-check text-brand-cyan mr-1.5"></i> High-Retention Pacing & Trend Matching</li>
+          </ul>
+        </div>
+        <button onclick="addToQuote('Videography & Short-Form Editing')" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold bg-white/5 hover:bg-brand-cyan hover:text-black border border-white/15 text-white transition flex items-center justify-center gap-2">
+          <i class="fa-solid fa-plus"></i> Add to Quote
+        </button>
+      </div>
+
+      <!-- 4. Social Media Growth & Page Management -->
+      <div class="service-card group glass-panel rounded-2xl p-6 border border-white/10 hover:border-brand-red/60 transition-all duration-300 flex flex-col justify-between" data-category="media">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold bg-brand-red/15 text-brand-red border border-brand-red/30 uppercase">Digital Reach</span>
+            <i class="fa-solid fa-hashtag text-brand-red text-xl group-hover:scale-110 transition-transform"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brand-red transition-colors">Social Media Management</h3>
+          <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            Strategic digital presence management for creators and local companies. Consistent schedule posting, audience engagement, bio optimizations, thumbnail design, and brand voice cohesion.
+          </p>
+          <ul class="text-xs text-slate-400 space-y-1.5 font-mono mb-6">
+            <li><i class="fa-solid fa-check text-brand-red mr-1.5"></i> Multi-Platform Content Distribution</li>
+            <li><i class="fa-solid fa-check text-brand-red mr-1.5"></i> Analytics, Reach Audits & Engagement Boosts</li>
+            <li><i class="fa-solid fa-check text-brand-red mr-1.5"></i> Custom Link-in-Bio & Booking Funnels</li>
+          </ul>
+        </div>
+        <button onclick="addToQuote('Social Media Management')" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold bg-white/5 hover:bg-brand-red hover:text-white border border-white/15 text-white transition flex items-center justify-center gap-2">
+          <i class="fa-solid fa-plus"></i> Add to Quote
+        </button>
+      </div>
+
+      <!-- 5. OS Restores & Clean System Setup -->
+      <div class="service-card group glass-panel rounded-2xl p-6 border border-white/10 hover:border-brand-cyan/60 transition-all duration-300 flex flex-col justify-between" data-category="tech">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold bg-brand-cyan/15 text-brand-cyan border border-brand-cyan/30 uppercase">Tech Support</span>
+            <i class="fa-solid fa-desktop text-brand-cyan text-xl group-hover:scale-110 transition-transform"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brand-cyan transition-colors">OS Restores & Diagnostic Setups</h3>
+          <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            Revive sluggish or infected PCs and laptops. Full clean operating system reinstalls (Windows 11, macOS Sequoia, Linux Ubuntu/Pop!_OS), driver updates, debloating, and SSD upgrades for maximum speed.
+          </p>
+          <ul class="text-xs text-slate-400 space-y-1.5 font-mono mb-6">
+            <li><i class="fa-solid fa-check text-brand-cyan mr-1.5"></i> Secure Data Backup & Partition Migrations</li>
+            <li><i class="fa-solid fa-check text-brand-cyan mr-1.5"></i> Bloatware Removal & Performance Optimization</li>
+            <li><i class="fa-solid fa-check text-brand-cyan mr-1.5"></i> Hardware Thermal & Memory Health Check</li>
+          </ul>
+        </div>
+        <button onclick="addToQuote('OS Restores & Diagnostics')" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold bg-white/5 hover:bg-brand-cyan hover:text-black border border-white/15 text-white transition flex items-center justify-center gap-2">
+          <i class="fa-solid fa-plus"></i> Add to Quote
+        </button>
+      </div>
+
+      <!-- 6. Firestick & Streaming Media Optimization -->
+      <div class="service-card group glass-panel rounded-2xl p-6 border border-white/10 hover:border-brand-red/60 transition-all duration-300 flex flex-col justify-between" data-category="tech">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold bg-brand-red/15 text-brand-red border border-brand-red/30 uppercase">Hardware & TV</span>
+            <i class="fa-solid fa-tv text-brand-red text-xl group-hover:scale-110 transition-transform"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brand-red transition-colors">Fire Stick & Media Optimization</h3>
+          <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            Expert unlocked configuration for Amazon Fire Sticks, Android TV boxes, and smart home streaming hubs. Clean launcher setups, Kodi/Stremio configurations, VPN shield integration, and storage expansions.
+          </p>
+          <ul class="text-xs text-slate-400 space-y-1.5 font-mono mb-6">
+            <li><i class="fa-solid fa-check text-brand-red mr-1.5"></i> Third-Party Media Sideloading & Custom UI</li>
+            <li><i class="fa-solid fa-check text-brand-red mr-1.5"></i> Buffer Elimination & Cache Auto-Cleaners</li>
+            <li><i class="fa-solid fa-check text-brand-red mr-1.5"></i> Client Walkthrough & Remote Support</li>
+          </ul>
+        </div>
+        <button onclick="addToQuote('Fire Stick & Media Optimization')" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold bg-white/5 hover:bg-brand-red hover:text-white border border-white/15 text-white transition flex items-center justify-center gap-2">
+          <i class="fa-solid fa-plus"></i> Add to Quote
+        </button>
+      </div>
+
+      <!-- 7. Software Setup, Migrations & Legal Unlocks -->
+      <div class="service-card group glass-panel rounded-2xl p-6 border border-white/10 hover:border-brand-cyan/60 transition-all duration-300 flex flex-col justify-between" data-category="tech">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold bg-brand-cyan/15 text-brand-cyan border border-brand-cyan/30 uppercase">Software Suite</span>
+            <i class="fa-solid fa-unlock-keyhole text-brand-cyan text-xl group-hover:scale-110 transition-transform"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brand-cyan transition-colors">Software Setup & System Unlocks</h3>
+          <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            Professional software installations (Creative Cloud, audio DAWs, office productivity, CRM tools). Carrier unlocking consultation, bootloader support, recovery key retrievals, and network device configurations.
+          </p>
+          <ul class="text-xs text-slate-400 space-y-1.5 font-mono mb-6">
+            <li><i class="fa-solid fa-check text-brand-cyan mr-1.5"></i> Licensed Software Deployment & Cloud Sync</li>
+            <li><i class="fa-solid fa-check text-brand-cyan mr-1.5"></i> Account Recovery Assistance & Auth Setups</li>
+            <li><i class="fa-solid fa-check text-brand-cyan mr-1.5"></i> Peripheral Calibration (Printers, Audio DACs)</li>
+          </ul>
+        </div>
+        <button onclick="addToQuote('Software Installs & Unlocks')" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold bg-white/5 hover:bg-brand-cyan hover:text-black border border-white/15 text-white transition flex items-center justify-center gap-2">
+          <i class="fa-solid fa-plus"></i> Add to Quote
+        </button>
+      </div>
+
+      <!-- 8. Pokémon Vault & Gaming Services -->
+      <div class="service-card group glass-panel rounded-2xl p-6 border border-white/10 hover:border-brand-cyan/60 transition-all duration-300 flex flex-col justify-between" data-category="gaming">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold bg-yellow-500/15 text-yellow-400 border border-yellow-500/30 uppercase">Gaming Vault</span>
+            <i class="fa-solid fa-gamepad text-yellow-400 text-xl group-hover:scale-110 transition-transform"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">Pokémon Trading, Saves & TCG Services</h3>
+          <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            Competitive VGC / battle-ready Pokémon curation, legitimate trade distribution, Pokédex completion service, and TCG collection cataloging / appraisal. Retro cartridge battery replacements and save file backups.
+          </p>
+          <ul class="text-xs text-slate-400 space-y-1.5 font-mono mb-6">
+            <li><i class="fa-solid fa-check text-yellow-400 mr-1.5"></i> Custom EV/IV Battle-Ready Teams</li>
+            <li><i class="fa-solid fa-check text-yellow-400 mr-1.5"></i> Retro Game Boy / DS Save Extraction & Backup</li>
+            <li><i class="fa-solid fa-check text-yellow-400 mr-1.5"></i> TCG Raw & Graded Inventory Sourcing</li>
+          </ul>
+        </div>
+        <button onclick="addToQuote('Pokémon Vault / Gaming Services')" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold bg-white/5 hover:bg-yellow-400 hover:text-black border border-white/15 text-white transition flex items-center justify-center gap-2">
+          <i class="fa-solid fa-plus"></i> Add to Quote
+        </button>
+      </div>
+
+      <!-- 9. Retro Handheld & Console Modding / Setups -->
+      <div class="service-card group glass-panel rounded-2xl p-6 border border-white/10 hover:border-purple-500/60 transition-all duration-300 flex flex-col justify-between" data-category="gaming">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold bg-purple-500/15 text-purple-400 border border-purple-500/30 uppercase">Console Modding</span>
+            <i class="fa-solid fa-vr-cardboard text-purple-400 text-xl group-hover:scale-110 transition-transform"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">Handheld & Retro Console Builds</h3>
+          <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            Turnkey handheld emulation setups (Anbernic, Miyoo Mini, Steam Deck, Retroid). Custom firmware flashes (GarlicOS, OnionOS), clean curated game libraries, box-art scraping, and customized handheld ergonomics.
+          </p>
+          <ul class="text-xs text-slate-400 space-y-1.5 font-mono mb-6">
+            <li><i class="fa-solid fa-check text-purple-400 mr-1.5"></i> MicroSD High-Speed Prep & Custom OS</li>
+            <li><i class="fa-solid fa-check text-purple-400 mr-1.5"></i> Complete Retro Library Organization</li>
+            <li><i class="fa-solid fa-check text-purple-400 mr-1.5"></i> Competitive Gaming Coach & 2K/FPS Setups</li>
+          </ul>
+        </div>
+        <button onclick="addToQuote('Handheld & Console Mod Builds')" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold bg-white/5 hover:bg-purple-500 hover:text-white border border-white/15 text-white transition flex items-center justify-center gap-2">
+          <i class="fa-solid fa-plus"></i> Add to Quote
+        </button>
+      </div>
+
+      <!-- 10. New Business Consultations & Launch Kits -->
+      <div class="service-card group glass-panel rounded-2xl p-6 border border-white/10 hover:border-brand-cyan/60 transition-all duration-300 flex flex-col justify-between" data-category="business">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold bg-brand-cyan/15 text-brand-cyan border border-brand-cyan/30 uppercase">Startup Launch</span>
+            <i class="fa-solid fa-rocket text-brand-cyan text-xl group-hover:scale-110 transition-transform"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brand-cyan transition-colors">New Business Launch & Digital Setup</h3>
+          <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            Everything an entrepreneur needs to start from scratch. Domain acquisition, professional custom email addresses (you@yourname.com), logo branding kits, Google Business Profile setups, and one-page web hubs.
+          </p>
+          <ul class="text-xs text-slate-400 space-y-1.5 font-mono mb-6">
+            <li><i class="fa-solid fa-check text-brand-cyan mr-1.5"></i> Custom Domain & Cloud Email Routing</li>
+            <li><i class="fa-solid fa-check text-brand-cyan mr-1.5"></i> Business Cards, QR Links & Social Assets</li>
+            <li><i class="fa-solid fa-check text-brand-cyan mr-1.5"></i> Invoicing & Client Management Systems</li>
+          </ul>
+        </div>
+        <button onclick="addToQuote('New Business Launch Kit')" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold bg-white/5 hover:bg-brand-cyan hover:text-black border border-white/15 text-white transition flex items-center justify-center gap-2">
+          <i class="fa-solid fa-plus"></i> Add to Quote
+        </button>
+      </div>
+
+      <!-- 11. Credit Repair & Business Credit Roadmaps -->
+      <div class="service-card group glass-panel rounded-2xl p-6 border border-white/10 hover:border-emerald-500/60 transition-all duration-300 flex flex-col justify-between" data-category="business">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 uppercase">Financial Strategy</span>
+            <i class="fa-solid fa-shield-halved text-emerald-400 text-xl group-hover:scale-110 transition-transform"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">Credit Repair & Tiered Business Credit</h3>
+          <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            Actionable roadmaps to repair personal credit profiles, remove inaccurate remarks, and establish Tier 1 through Tier 4 business credit lines (EIN-only funding) to scale without risking personal guarantees.
+          </p>
+          <ul class="text-xs text-slate-400 space-y-1.5 font-mono mb-6">
+            <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i> Credit Report Auditing & Dispute Roadmaps</li>
+            <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i> Dun & Bradstreet, NAV & Paydex Score Setups</li>
+            <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i> Net-30 Vendor Account Structuring</li>
+          </ul>
+        </div>
+        <button onclick="addToQuote('Credit Repair & Business Credit Roadmap')" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold bg-white/5 hover:bg-emerald-500 hover:text-black border border-white/15 text-white transition flex items-center justify-center gap-2">
+          <i class="fa-solid fa-plus"></i> Add to Quote
+        </button>
+      </div>
+
+      <!-- 12. Tax Prep Assistance & Bookkeeping Prep -->
+      <div class="service-card group glass-panel rounded-2xl p-6 border border-white/10 hover:border-brand-red/60 transition-all duration-300 flex flex-col justify-between" data-category="business">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold bg-brand-red/15 text-brand-red border border-brand-red/30 uppercase">Financial Prep</span>
+            <i class="fa-solid fa-file-invoice-dollar text-brand-red text-xl group-hover:scale-110 transition-transform"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brand-red transition-colors">Tax Assistance & Record Organization</h3>
+          <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            Get your freelancing, creator earnings, and 1099 contracts audited and organized. Expense categorization, write-off discovery, receipt ledger structuring, and CPA-ready filing preparation.
+          </p>
+          <ul class="text-xs text-slate-400 space-y-1.5 font-mono mb-6">
+            <li><i class="fa-solid fa-check text-brand-red mr-1.5"></i> Creator & Freelance Write-Off Checklist</li>
+            <li><i class="fa-solid fa-check text-brand-red mr-1.5"></i> Profit & Loss (P&L) Ledger Organization</li>
+            <li><i class="fa-solid fa-check text-brand-red mr-1.5"></i> Year-Round Deductible Strategy</li>
+          </ul>
+        </div>
+        <button onclick="addToQuote('Tax Assistance & Record Prep')" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold bg-white/5 hover:bg-brand-red hover:text-white border border-white/15 text-white transition flex items-center justify-center gap-2">
+          <i class="fa-solid fa-plus"></i> Add to Quote
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Instant Quote & Inquiry Builder -->
+  <section id="quote-builder" class="max-w-5xl mx-auto px-4 mb-20">
+    <div class="glass-panel border border-brand-cyan/30 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+      <!-- Glow accent -->
+      <div class="absolute -right-20 -top-20 w-64 h-64 bg-brand-cyan/15 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-2xl">
+        <span class="text-brand-cyan font-mono text-xs uppercase tracking-widest font-bold">Fast Estimator & Booking</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">Custom Service Inquiry Builder</h2>
+        <p class="text-slate-300 text-sm mt-2">
+          Select all the items you're interested in. The system bundles them into a formatted proposal ready to send straight to Limeque Unlimited via SMS or Email.
+        </p>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Checklist of services -->
+        <div class="lg:col-span-7 space-y-2.5 max-h-[380px] overflow-y-auto pr-2" id="checklist-container">
+          <!-- Dynamically populated or manual options -->
+          <label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-white/5 hover:border-brand-cyan/40 cursor-pointer transition">
+            <input type="checkbox" value="Live Streaming & Broadcast Setup" onchange="updateSelectedItems()" class="w-4 h-4 text-brand-cyan rounded bg-slate-800 border-white/20 focus:ring-0">
+            <span class="text-sm text-slate-200">Live Streaming Setup & Broadcast Engineering</span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-white/5 hover:border-brand-cyan/40 cursor-pointer transition">
+            <input type="checkbox" value="Photography Session (Portraits/Products)" onchange="updateSelectedItems()" class="w-4 h-4 text-brand-cyan rounded bg-slate-800 border-white/20 focus:ring-0">
+            <span class="text-sm text-slate-200">Photography Session (Brand, Portraits, Products)</span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-white/5 hover:border-brand-cyan/40 cursor-pointer transition">
+            <input type="checkbox" value="Videography & Short-Form Edits" onchange="updateSelectedItems()" class="w-4 h-4 text-brand-cyan rounded bg-slate-800 border-white/20 focus:ring-0">
+            <span class="text-sm text-slate-200">Videography & Short-Form Content (TikTok/Reels)</span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-white/5 hover:border-brand-cyan/40 cursor-pointer transition">
+            <input type="checkbox" value="Clean OS Restore & Diagnostic PC Setup" onchange="updateSelectedItems()" class="w-4 h-4 text-brand-cyan rounded bg-slate-800 border-white/20 focus:ring-0">
+            <span class="text-sm text-slate-200">Clean OS Restore & Hardware Diagnostic</span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-white/5 hover:border-brand-cyan/40 cursor-pointer transition">
+            <input type="checkbox" value="Firestick & Media Center Setup" onchange="updateSelectedItems()" class="w-4 h-4 text-brand-cyan rounded bg-slate-800 border-white/20 focus:ring-0">
+            <span class="text-sm text-slate-200">Fire Stick / TV Box Optimization & Apps</span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-white/5 hover:border-brand-cyan/40 cursor-pointer transition">
+            <input type="checkbox" value="Pokémon Vault & Game Trade Services" onchange="updateSelectedItems()" class="w-4 h-4 text-brand-cyan rounded bg-slate-800 border-white/20 focus:ring-0">
+            <span class="text-sm text-slate-200">Pokémon Competitive Saves, Trading & TCG Vault</span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-white/5 hover:border-brand-cyan/40 cursor-pointer transition">
+            <input type="checkbox" value="Retro Handheld / Console Modding" onchange="updateSelectedItems()" class="w-4 h-4 text-brand-cyan rounded bg-slate-800 border-white/20 focus:ring-0">
+            <span class="text-sm text-slate-200">Retro Handheld & Console Mod Builds</span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-white/5 hover:border-brand-cyan/40 cursor-pointer transition">
+            <input type="checkbox" value="New Business Launch Consultation" onchange="updateSelectedItems()" class="w-4 h-4 text-brand-cyan rounded bg-slate-800 border-white/20 focus:ring-0">
+            <span class="text-sm text-slate-200">New Business Launch & Digital Presence Setup</span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-white/5 hover:border-brand-cyan/40 cursor-pointer transition">
+            <input type="checkbox" value="Credit Building & Repair Consult" onchange="updateSelectedItems()" class="w-4 h-4 text-brand-cyan rounded bg-slate-800 border-white/20 focus:ring-0">
+            <span class="text-sm text-slate-200">Credit Building Roadmap & Repair Consultation</span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-white/5 hover:border-brand-cyan/40 cursor-pointer transition">
+            <input type="checkbox" value="Tax Prep Assistance & Ledger Review" onchange="updateSelectedItems()" class="w-4 h-4 text-brand-cyan rounded bg-slate-800 border-white/20 focus:ring-0">
+            <span class="text-sm text-slate-200">Freelance Tax Prep Assistance & Record Audits</span>
+          </label>
+        </div>
+
+        <!-- Live Inquiry Output Box -->
+        <div class="lg:col-span-5 glass-panel bg-black/70 p-5 rounded-2xl border border-white/10 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between border-b border-white/10 pb-3 mb-3">
+              <span class="text-xs font-mono text-slate-400 uppercase">Selected Items (<span id="selected-count">0</span>)</span>
+              <button onclick="clearSelection()" class="text-[11px] text-brand-red hover:underline font-mono">Reset</button>
+            </div>
+
+            <div id="selected-preview" class="min-h-[140px] text-xs font-mono text-slate-300 space-y-1 mb-4">
+              <span class="text-slate-500 italic">No services checked yet. Click any service card or check the list above.</span>
+            </div>
+
+            <!-- Notes field -->
+            <div class="mb-4">
+              <label class="text-[11px] font-mono text-slate-400 block mb-1">Your Name or Contact Details (Optional):</label>
+              <input type="text" id="client-name" placeholder="e.g., Alex / 757-555-0199" class="w-full px-3 py-2 text-xs rounded-xl bg-slate-900 border border-white/10 focus:border-brand-cyan focus:outline-none text-white">
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="space-y-2 pt-2">
+            <button onclick="sendViaSMS()" class="w-full py-3 rounded-xl bg-brand-cyan hover:bg-cyan-400 text-black font-bold text-xs uppercase tracking-wider transition flex items-center justify-center gap-2 shadow-neonCyan">
+              <i class="fa-solid fa-comment-sms"></i> Send Inquiry via Text
+            </button>
+            <button onclick="sendViaEmail()" class="w-full py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs tracking-wide transition flex items-center justify-center gap-2 border border-white/10">
+              <i class="fa-solid fa-paper-plane"></i> Send via Email
+            </button>
+            <button onclick="copyQuoteSummary()" class="w-full py-2 rounded-xl text-slate-400 hover:text-white text-xs font-mono transition text-center">
+              <i class="fa-solid fa-copy mr-1"></i> Copy formatted summary to clipboard
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Contact Hub Card (Matching physical card design) -->
+  <section class="max-w-4xl mx-auto px-4 mb-20">
+    <div class="glass-panel border-2 border-brand-red/30 rounded-3xl p-6 sm:p-10 relative shadow-2xl bg-gradient-to-b from-slate-950 via-[#0a0d16] to-[#07090e]">
+      
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        
+        <!-- Brand Card Left Details -->
+        <div class="space-y-6 text-center md:text-left flex-1">
+          <div>
+            <div class="flex items-center justify-center md:justify-start gap-3 mb-2">
+              <div class="w-9 h-9 bg-black rounded-lg p-1 border border-white/20">
+                <svg viewBox="0 0 100 100" class="w-full h-full">
+                  <path d="M22 15 L40 15 L40 68 L22 75 Z" fill="#ffffff" />
+                  <path d="M38 38 L82 12 L82 28 L38 52 Z" fill="#e61b36" />
+                  <path d="M68 28 L82 28 L82 66 C82 78 72 88 56 88 C40 88 28 80 22 74 L32 64 C37 68 46 74 56 74 C62 74 68 70 68 64 Z" fill="#ffffff" />
+                </svg>
+              </div>
+              <span class="text-2xl font-black tracking-tight text-white">LIMEQUE <span class="text-brand-red">UNLIMITED</span></span>
+            </div>
+            <p class="text-xs font-mono tracking-widest text-brand-cyan uppercase">Photography • Branding • Business Launch</p>
+          </div>
+
+          <div class="space-y-2">
+            <span class="text-xs uppercase tracking-wider text-slate-400 font-mono block">Direct Call / Text</span>
+            <a href="tel:5465463783" class="text-3xl sm:text-4xl font-extrabold font-mono text-white hover:text-brand-cyan transition block tracking-tight">
+              546-LIMEQUE
+            </a>
+            <p class="text-xs text-slate-400 font-mono">546-546-3783 • Hampton Roads + Remote</p>
+          </div>
+
+          <div class="space-y-1.5 pt-2 border-t border-white/10 text-sm">
+            <div class="flex items-center justify-center md:justify-start gap-2 text-slate-300">
+              <i class="fa-solid fa-envelope text-brand-red w-4"></i>
+              <a href="mailto:LimequeUltd@icloud.com" class="hover:underline">LimequeUltd@icloud.com</a>
+            </div>
+            <div class="flex items-center justify-center md:justify-start gap-2 text-slate-300">
+              <i class="fa-brands fa-instagram text-brand-red w-4"></i>
+              <a href="https://instagram.com/limequeunlimited" target="_blank" class="hover:underline">@limequeunlimited</a>
+            </div>
+          </div>
+
+          <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-3">
+            <button onclick="downloadVCard()" class="px-5 py-2.5 rounded-xl bg-brand-red hover:bg-rose-600 text-white font-bold text-xs uppercase tracking-wider transition shadow-neonRed flex items-center gap-2">
+              <i class="fa-solid fa-download"></i> Save to Phone Contacts
+            </button>
+            <button onclick="copyToClipboard('546-546-3783', 'Phone number copied!')" class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs tracking-wider transition border border-white/15 flex items-center gap-2">
+              <i class="fa-solid fa-copy text-brand-cyan"></i> Copy Phone
+            </button>
+          </div>
+        </div>
+
+        <!-- Brand Card Right: Clean QR Mockup matching business card -->
+        <div class="flex flex-col items-center justify-center bg-white p-5 rounded-2xl shadow-xl flex-shrink-0 text-center w-56">
+          <!-- Dynamic QR Image targeting telephone/vcard link -->
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https%3A%2F%2Finstagram.com%2Flimequeunlimited" alt="QR Contact Code" class="w-40 h-40 object-contain rounded-md mb-2">
+          <span class="text-[11px] font-black uppercase tracking-wider text-black font-sans">SAVE MY CONTACT</span>
+          <span class="text-[9px] text-slate-500 font-mono">Scan with camera</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-auto border-t border-white/10 pt-8 text-center text-xs text-slate-500 max-w-7xl mx-auto px-4 w-full">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pb-6">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        <span class="text-slate-400">Available for bookings & tech sessions</span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-400 font-mono text-xs">
+        <a href="#services" class="hover:text-white">Services</a>
+        <span>•</span>
+        <a href="tel:5465463783" class="hover:text-white">546-546-3783</a>
+        <span>•</span>
+        <a href="mailto:LimequeUltd@icloud.com" class="hover:text-white">LimequeUltd@icloud.com</a>
+      </div>
+      <div>
+        <span>&copy; <span id="year"></span> Limeque Unlimited. All Rights Reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none glass-panel border border-brand-cyan/60 bg-slate-950/90 text-white px-5 py-3 rounded-2xl shadow-neonCyan flex items-center gap-3 text-xs font-mono">
+    <i class="fa-solid fa-circle-check text-brand-cyan text-base"></i>
+    <span id="toast-message">Action successful</span>
+  </div>
+
+  <!-- Modal: Step-by-Step Free Domain & GitHub Hosting -->
+  <div id="hosting-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="glass-panel border border-brand-cyan/40 bg-slate-950 rounded-3xl max-w-2xl w-full p-6 sm:p-8 relative shadow-2xl max-h-[90vh] overflow-y-auto">
+      <button onclick="closeHostingGuideModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white text-lg">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="flex items-center gap-2.5 mb-4">
+        <div class="w-9 h-9 rounded-xl bg-brand-cyan/20 flex items-center justify-center text-brand-cyan">
+          <i class="fa-solid fa-globe"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white">How to Get Your Free Domain & Live Hosting</h3>
+      </div>
+
+      <div class="space-y-4 text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
+        
+        <div class="p-3.5 rounded-xl bg-slate-900 border border-white/10">
+          <h4 class="font-bold text-white mb-1 flex items-center gap-2">
+            <span class="w-5 h-5 rounded-full bg-brand-cyan text-black flex items-center justify-center text-[10px] font-bold">1</span>
+            GitHub Pages (100% Free Lifetime Hosting)
+          </h4>
+          <p class="text-slate-400 mb-2">
+            Go to <a href="https://github.com" target="_blank" class="text-brand-cyan underline">github.com</a>, create a free account, and make a new public repository named:
+          </p>
+          <code class="block font-mono bg-black/70 text-cyan-300 p-2 rounded-lg text-xs">yourusername.github.io  (or  limequeunlimited.github.io)</code>
+          <p class="text-slate-400 mt-2">
+            Upload this exact <code class="text-white">index.html</code> file into it. Within 60 seconds, your website is live worldwide at that URL!
+          </p>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-slate-900 border border-white/10">
+          <h4 class="font-bold text-white mb-1 flex items-center gap-2">
+            <span class="w-5 h-5 rounded-full bg-brand-red text-white flex items-center justify-center text-[10px] font-bold">2</span>
+            Free Custom Domain via GitHub Student Pack
+          </h4>
+          <p class="text-slate-400">
+            If you have any active student or college email (<code class="text-white">.edu</code>), visit <a href="https://education.github.com/pack" target="_blank" class="text-brand-red underline">education.github.com/pack</a>. You get:
+          </p>
+          <ul class="list-disc list-inside mt-1.5 space-y-1 text-slate-300 font-mono text-xs">
+            <li><strong>Free 1-Year .me Domain</strong> from Namecheap</li>
+            <li><strong>Free 1-Year .tech Domain</strong> from Techdomains</li>
+            <li>Free SSL certificate & Cloudflare protection</li>
+          </ul>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-slate-900 border border-white/10">
+          <h4 class="font-bold text-white mb-1 flex items-center gap-2">
+            <span class="w-5 h-5 rounded-full bg-yellow-400 text-black flex items-center justify-center text-[10px] font-bold">3</span>
+            Alternative Instant Free Hosting (No Code Required)
+          </h4>
+          <p class="text-slate-400">
+            You can also drag-and-drop this single file to <strong>Netlify Drop</strong> (<a href="https://app.netlify.com/drop" target="_blank" class="text-brand-cyan underline">app.netlify.com/drop</a>) or <strong>Vercel</strong> to get a free live URL in 10 seconds like <code class="text-yellow-300">limeque.netlify.app</code>.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="mt-6 flex justify-end">
+        <button onclick="closeHostingGuideModal()" class="px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs uppercase tracking-wider">
+          Got It
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Contact & Direct Connect -->
+  <div id="contact-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="glass-panel border border-brand-cyan/40 bg-slate-950 rounded-3xl max-w-md w-full p-6 sm:p-8 relative shadow-2xl text-center">
+      <button onclick="closeContactModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white text-lg">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="w-16 h-16 mx-auto mb-4 bg-slate-900 rounded-2xl p-2 border border-brand-cyan/40 shadow-neonCyan flex items-center justify-center">
+        <svg viewBox="0 0 100 100" class="w-full h-full">
+          <path d="M22 15 L40 15 L40 68 L22 75 Z" fill="#ffffff" />
+          <path d="M38 38 L82 12 L82 28 L38 52 Z" fill="#e61b36" />
+          <path d="M68 28 L82 28 L82 66 C82 78 72 88 56 88 C40 88 28 80 22 74 L32 64 C37 68 46 74 56 74 C62 74 68 70 68 64 Z" fill="#ffffff" />
+        </svg>
+      </div>
+
+      <h3 class="text-2xl font-black text-white">Limeque Unlimited</h3>
+      <p class="text-xs text-brand-cyan font-mono mb-6">546-LIMEQUE • Hampton Roads + Remote</p>
+
+      <div class="space-y-3">
+        <a href="tel:5465463783" class="w-full py-3 rounded-xl bg-brand-red hover:bg-rose-600 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-neonRed transition">
+          <i class="fa-solid fa-phone"></i> Call (546) 546-3783
+        </a>
+        <a href="sms:5465463783" class="w-full py-3 rounded-xl bg-brand-cyan hover:bg-cyan-400 text-black font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-neonCyan transition">
+          <i class="fa-solid fa-comment"></i> Text (546) 546-3783
+        </a>
+        <button onclick="downloadVCard()" class="w-full py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-medium text-xs flex items-center justify-center gap-2 border border-white/15 transition">
+          <i class="fa-solid fa-id-badge text-brand-cyan"></i> Save Contact Card (.vcf)
+        </button>
+        <a href="mailto:LimequeUltd@icloud.com" class="w-full py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 font-mono text-xs flex items-center justify-center gap-2 border border-white/10 transition">
+          <i class="fa-solid fa-envelope"></i> LimequeUltd@icloud.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript logic -->
+  <script>
+    // Current Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Clipboard helper using execCommand for iframe safety
+    function copyToClipboard(text, message) {
+      const tempInput = document.createElement("input");
+      tempInput.style.position = "absolute";
+      tempInput.style.left = "-9999px";
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      try {
+        document.execCommand('copy');
+        showToast(message || "Copied to clipboard!");
+      } catch (err) {
+        showToast("Press Ctrl+C to copy");
+      }
+      document.body.removeChild(tempInput);
+    }
+
+    // Toast notification
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const text = document.getElementById('toast-message');
+      text.textContent = msg;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 2500);
+    }
+
+    // Category filtering
+    function filterCategory(cat) {
+      const cards = document.querySelectorAll('.service-card');
+      const buttons = document.querySelectorAll('.category-btn');
+
+      // Update button styling
+      buttons.forEach(b => {
+        b.classList.remove('bg-brand-cyan', 'text-black');
+        b.classList.add('text-slate-300');
+      });
+
+      const activeBtn = document.getElementById('btn-' + cat);
+      if (activeBtn) {
+        activeBtn.classList.remove('text-slate-300');
+        activeBtn.classList.add('bg-brand-cyan', 'text-black');
+      }
+
+      cards.forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-category') === cat) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Interactive Service Inquiry / Quote builder
+    let selectedServices = new Set();
+
+    function updateSelectedItems() {
+      const checkboxes = document.querySelectorAll('#checklist-container input[type="checkbox"]');
+      selectedServices.clear();
+      checkboxes.forEach(cb => {
+        if (cb.checked) {
+          selectedServices.add(cb.value);
+        }
+      });
+      renderSelection();
+    }
+
+    function addToQuote(serviceName) {
+      // Find checkbox or add to set
+      const checkboxes = document.querySelectorAll('#checklist-container input[type="checkbox"]');
+      let found = false;
+      checkboxes.forEach(cb => {
+        if (cb.value.toLowerCase().includes(serviceName.toLowerCase()) || serviceName.toLowerCase().includes(cb.value.toLowerCase())) {
+          cb.checked = true;
+          found = true;
+        }
+      });
+      selectedServices.add(serviceName);
+      renderSelection();
+      showToast(`Added "${serviceName}" to quote`);
+
+      // Scroll smoothly to quote builder
+      document.getElementById('quote-builder').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function renderSelection() {
+      const preview = document.getElementById('selected-preview');
+      const count = document.getElementById('selected-count');
+      count.textContent = selectedServices.size;
+
+      if (selectedServices.size === 0) {
+        preview.innerHTML = `<span class="text-slate-500 italic">No services checked yet. Click any service card or check the list above.</span>`;
+        return;
+      }
+
+      let html = '<ul class="space-y-1.5">';
+      selectedServices.forEach(item => {
+        html += `<li class="flex items-center justify-between text-slate-200 bg-white/5 px-2.5 py-1.5 rounded-lg border border-white/5">
+          <span>• ${item}</span>
+          <button onclick="removeService('${item.replace(/'/g, "\\'")}')" class="text-brand-red hover:text-rose-400 ml-2"><i class="fa-solid fa-xmark"></i></button>
+        </li>`;
+      });
+      html += '</ul>';
+      preview.innerHTML = html;
+    }
+
+    function removeService(item) {
+      selectedServices.delete(item);
+      const checkboxes = document.querySelectorAll('#checklist-container input[type="checkbox"]');
+      checkboxes.forEach(cb => {
+        if (cb.value === item) cb.checked = false;
+      });
+      renderSelection();
+    }
+
+    function clearSelection() {
+      selectedServices.clear();
+      const checkboxes = document.querySelectorAll('#checklist-container input[type="checkbox"]');
+      checkboxes.forEach(cb => cb.checked = false);
+      renderSelection();
+      showToast("Cleared selections");
+    }
+
+    function generateSummaryText() {
+      const name = document.getElementById('client-name').value.trim();
+      const items = Array.from(selectedServices);
+      if (items.length === 0) {
+        return null;
+      }
+      let summary = `Hello Limeque Unlimited!\n`;
+      if (name) summary += `My Name / Contact: ${name}\n`;
+      summary += `I am requesting an inquiry/quote for the following services:\n`;
+      items.forEach((it, idx) => {
+        summary += `${idx + 1}. ${it}\n`;
+      });
+      summary += `\nPlease let me know your availability and rates. Thank you!`;
+      return summary;
+    }
+
+    function copyQuoteSummary() {
+      const summary = generateSummaryText();
+      if (!summary) {
+        showToast("Please check at least one service first!");
+        return;
+      }
+      copyToClipboard(summary, "Inquiry summary copied to clipboard!");
+    }
+
+    function sendViaSMS() {
+      const summary = generateSummaryText();
+      if (!summary) {
+        showToast("Please select at least one service!");
+        return;
+      }
+      const encoded = encodeURIComponent(summary);
+      window.location.href = `sms:5465463783?body=${encoded}`;
+    }
+
+    function sendViaEmail() {
+      const summary = generateSummaryText();
+      if (!summary) {
+        showToast("Please select at least one service!");
+        return;
+      }
+      const encodedBody = encodeURIComponent(summary);
+      const encodedSubject = encodeURIComponent("Limeque Unlimited Service Inquiry");
+      window.location.href = `mailto:LimequeUltd@icloud.com?subject=${encodedSubject}&body=${encodedBody}`;
+    }
+
+    // Modal helpers
+    function openContactModal() {
+      document.getElementById('contact-modal').classList.remove('hidden');
+      document.getElementById('contact-modal').classList.add('flex');
+    }
+    function closeContactModal() {
+      document.getElementById('contact-modal').classList.add('hidden');
+      document.getElementById('contact-modal').classList.remove('flex');
+    }
+
+    function openHostingGuideModal() {
+      document.getElementById('hosting-modal').classList.remove('hidden');
+      document.getElementById('hosting-modal').classList.add('flex');
+    }
+    function closeHostingGuideModal() {
+      document.getElementById('hosting-modal').classList.add('hidden');
+      document.getElementById('hosting-modal').classList.remove('flex');
+    }
+
+    // vCard File generator for fast one-tap phone saving
+    function downloadVCard() {
+      const vcardData = `BEGIN:VCARD
+VERSION:3.0
+N:Unlimited;Limeque;;;
+FN:Limeque Unlimited
+ORG:Limeque Unlimited LLC
+TITLE:Creative Media, Tech & Launch Services
+TEL;TYPE=CELL,VOICE,PREF:546-546-3783
+EMAIL;TYPE=INTERNET:LimequeUltd@icloud.com
+NOTE:Photography, Live Streaming, Video Editing, OS Restores, Pokémon Vault, Gaming Builds, Credit & Launch Consulting.
+URL:https://instagram.com/limequeunlimited
+END:VCARD`;
+
+      const blob = new Blob([vcardData], { type: 'text/vcard;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'Limeque_Unlimited.vcf');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+      showToast("Limeque Unlimited contact card ready!");
+    }
+  </script>
+</body>
+</html>
